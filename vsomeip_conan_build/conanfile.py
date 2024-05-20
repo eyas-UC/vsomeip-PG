@@ -47,7 +47,5 @@ class VSomeIPConan(ConanFile):
         cmake.install()
 
     def package_info(self):
-        # self.cpp_info.libs = ["vsomeip::vsomeip"]
-        # self.cpp_info.system_libs  = ["vsomeip::vsomeip"]
         self.cpp_info.libs = collect_libs(self)
 

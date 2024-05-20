@@ -9,11 +9,6 @@ class vsomeip_project(ConanFile):
    generators = "cmake_find_package"
    default_options = {"poco:shared": True, "openssl:shared": True}
 
-   def imports(self):
-      self.copy("*.dll", dst="bin", src="bin") # From bin to bin
-      self.copy("*.dylib*", dst="bin", src="lib") # From lib to bin
-
-
    def requirements(self):
          self.requires("vsomeip/3.3.0@rem/dev")
          pass

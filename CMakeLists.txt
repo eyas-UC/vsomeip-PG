@@ -1,6 +1,8 @@
+cmake_minimum_required(VERSION 3.24)
 project(vsomoeip-PG)
 
 find_package(vsomeip REQUIRED)
 
 add_executable(${PROJECT_NAME}_exec)
-target_link_libraries(vsomeip::vsomeip)
+
+add_subdirectory(code-base)
